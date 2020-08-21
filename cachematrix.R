@@ -5,7 +5,7 @@
 
 
 ## This function creates a list of functions that: 
-##sets the matrix (l$set())
+##sets the matrix (l$set(y)) "y" needs to have a length that can create a square matrix
 ##gets the matrix (l$get())
 ##sets the inverse of the matrix (l$setinverse())
 ##gets the inverse of the matrix (l$getinverse())
@@ -15,7 +15,7 @@ makeCacheMatrix <- function(x = matrix()) {
   
   set <- function(y) {
     l<-length(y)
-    x<<-matrix(y,l/2)
+    x<<-matrix(y,sqrt(l))
     i<<-NULL
     
   }
